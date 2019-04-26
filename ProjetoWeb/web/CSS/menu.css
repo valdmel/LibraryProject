@@ -1,0 +1,208 @@
+.footer
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    background-color:darkkhaki;
+    color:white;
+    clear:both;
+    text-align:center;
+}
+
+html, body
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.background_image
+{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/87/The_Library_of_Parliament_Ottawa_Canada_6D2B5588.jpg");
+    background-size: 100% 100%;
+    background-color: black;
+    -webkit-filter: blur(1px);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    z-index:-10;
+}
+
+.cf:before, .cf:after
+{
+  content:" ";
+  display: table;
+}
+
+.cf:after
+{
+  clear: both;
+}
+
+.cf
+{
+  *zoom: 1;
+}
+
+.menu
+{
+  list-style:none;
+  margin: 50px auto;
+  width: 800px;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+
+.menu > li
+{
+  background: darkkhaki;
+  float: left;
+  position: relative;
+}
+
+.menu a
+{
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+}
+
+.menu li:hover
+{
+  background: rosybrown;
+}
+
+.menu > li > a
+{
+  padding: 1em 2em;
+}
+
+
+.submenu
+{
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.submenu li
+{
+  background-color: wheat;
+  position: relative;
+  overflow: hidden;
+}
+
+.submenu > li > a
+{
+  padding: 1em 2em;
+}
+
+.submenu > li::after
+{
+  content:'';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+}
+
+.submenu, .submenu li
+{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.submenu li
+{
+  transition: .2s ease -webkit-transform;
+}
+
+.menu > li:hover .submenu, .menu > li:hover .submenu li
+{
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdownmenu ul, .dropdownmenu li
+{
+    margin: 0;
+    padding: 0;
+}
+
+.dropdownmenu ul
+{
+    background: gray;
+    list-style: none;
+    width: 100%;
+}
+
+.dropdownmenu li
+{
+    float: left;
+    position: relative;
+    width:auto;
+}
+
+.dropdownmenu a
+{
+    background-color:darkkhaki;
+    color:white;
+    text-align:center;
+    display: block;
+    font: bold 12px/20px sans-serif;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+.dropdownmenu li:hover a
+{
+    background: rosybrown;
+}
+
+#submenu
+{
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+li:hover ul#submenu
+{
+    opacity: 1;
+    top: 40px;
+    visibility: visible;
+}
+
+#submenu li
+{
+    float: none;
+    width: 100%;
+}
+
+#submenu a:hover
+{
+    background: rosybrown;
+}
+
+#submenu a
+{
+    background-color: wheat;
+}
